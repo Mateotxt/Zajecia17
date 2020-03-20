@@ -1,0 +1,176 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+
+class Samochod
+{
+	public:
+		int  mocSilnika=125;
+		float pojemnoscSilnika=1500;
+		bool silnik;
+		bool jazda;
+		
+		
+		
+		void konstruktoir()
+		{
+			cout<<"Dodawanie auta do bazy danych!"<<endl;
+			cout<<"Podaj moc silnika: ";
+			cin>>mocSilnika;
+			cout<<"Podaj pojemnosc silnika: ";
+			cin>>pojemnoscSilnika;
+			
+			
+			cout<<"Czy silnik ma byc uruchomiony?"<<endl;
+			cout<<"1) Tak /2) Nie"<<endl;
+		    int wybor;
+		    cin>>wybor;
+		    
+		    
+		    if(wybor==1)
+		    {
+		    	silnik = true;
+			}
+			else
+			{
+				silnik =false;
+			}
+			
+			
+		
+			
+		}
+		
+		
+		void hamuj()
+		{
+			
+			if (silnik=true)
+				{
+					cout<<"Samochod hamuje"<<endl;
+				}
+			
+			
+			
+		}
+		
+		void uruchomSilnik()
+		{
+ 			silnik = true;
+			 cout<<"Silnik urchomiony"<<endl;
+			 		
+		
+		
+		
+			
+		}
+		
+		void jedz()
+		{
+				if (silnik=true)
+				{
+					cout<<"Samochod jedzie!"<<endl;
+				}
+				else 
+				{
+					cout<<"silnik jest wylaczony"<<endl;
+				}
+			
+			
+			
+		}
+	
+	    
+	void wyswietl()
+	{
+		system( "cls" );
+		
+		
+		
+		
+		cout<<"Samchod posiada: "<<mocSilnika<<" koni mechanicznych"<<endl;
+		cout<<"Pojemnosc silnika wynosi: "<<pojemnoscSilnika<<" cm3"<<endl;
+		
+		if (silnik=true)
+				{
+					cout<<"Silnik jest uruchomiony!"<<endl;
+					
+				}
+				else
+				{
+					cout<<"Silnik jest wylaczony"<<endl;
+				}
+					cout<<" "<<endl;
+					cout<<" "<<endl;
+					cout<<" "<<endl;
+					cout<<" "<<endl;
+					
+	}
+
+};
+
+
+class Motocykl
+{
+	public:
+		int mocSilnika = 20;
+		float pojemnoscSilnika = 700;
+		
+		
+		void konstruktor()
+		{
+				cout<<"Dodawanie motocykla do bazy danych!"<<endl;
+			cout<<"Podaj moc silnika: ";
+			cin>>mocSilnika;
+			cout<<"Podaj pojemnosc silnika: ";
+			cin>>pojemnoscSilnika;
+		 } 
+		 
+		 
+		 void wyswietl()
+		 
+		 {
+		 	cout<<"Motocykl posiada: "<<mocSilnika<<" koni mechanicznych"<<endl;
+		cout<<"Pojemnosc silnika wynosi: "<<pojemnoscSilnika<<" cm3"<<endl;
+		
+		 		cout<<" "<<endl;
+					cout<<" "<<endl;
+					cout<<" "<<endl;
+					cout<<" "<<endl;
+		 	
+		 }
+		
+	
+	
+};
+
+
+
+
+
+int main()
+ {
+ 	while(true)
+ 	{
+ 		 	Samochod s1;
+ 	s1.konstruktoir();
+ //	s1.uruchomSilnik();
+ //	s1.jedz();
+ 	s1.wyswietl();
+ 	Motocykl m1;
+ 	m1.konstruktor();
+ 	m1.wyswietl();
+ 		cout<<"Czy chcesz zakanczysz program?"<<endl;
+ 		cout<<"1)Tak / 2) Nie"<<endl;
+ 		int a;
+ 		cin>>a;
+ 		if(a==1)
+ 		{
+ 			break;
+		 }
+		
+	 }
+
+
+	return 0;
+}
